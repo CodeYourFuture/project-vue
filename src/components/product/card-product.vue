@@ -1,5 +1,6 @@
 <template>
 	<div class="card-product">
+		<img src="./../../assets/product/pro.jpg">
 		<p>{{ product.tag }}</p>
 		<p>{{ product.name }}</p>
 	</div>
