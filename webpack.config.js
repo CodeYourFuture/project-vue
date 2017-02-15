@@ -23,8 +23,8 @@ module.exports = {
 				loader: 'style-loader!css-loader',
 			},
 			{
-				test: /\.(png|jpg)$/, 
-				loader: 'file-loader',
+				test: /\.(png|jpg|gif)$/, 
+				loader: 'url-loader?limit=8192&name=image/[name].[ext]',
 			},
 		],
 	},
