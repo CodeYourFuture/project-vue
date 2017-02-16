@@ -10,7 +10,7 @@ const vm = new Vue({
 	el: '#app',
 	components: {
 		'index': indexComponent,
-		'card-header': cardHeader,
+		'component-header': cardHeader,
 		'component-product': products,
 	}
 });

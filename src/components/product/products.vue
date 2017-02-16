@@ -1,7 +1,8 @@
 <template>
 	<section class="products">
 		<card-product v-for="product in products"
-					  :product="product"></card-product>
+					  :tag="product.tag"
+					  :name="product.name"></card-product>
 	</section>
 </template>
 

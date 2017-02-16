@@ -3,8 +3,8 @@
 		<a>
 			<img class="pro-img" src="./image/pro.jpg">
 		</a>
-		<p class="tag">{{ product.tag }}</p>
-		<a class="pro-name">{{ product.name }}</a>
+		<p class="tag">{{ tag }}</p>
+		<a class="pro-name">{{ name }}</a>
 	</div>
 </template>
 
@@ -17,7 +17,7 @@
 
 <script>
 	export default  {
-		props: ['product'],
+		props: ['tag','name'],
 		data() {
 			return {}
 		}
