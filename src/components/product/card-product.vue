@@ -1,10 +1,10 @@
 <template>
 	<div class="card-product">
-		<a>
-			<img class="pro-img" src="./image/pro.jpg">
-		</a>
+		<router-link :to="{ path: 'detail' }">
+		<img class="pro-img" src="./image/pro.jpg">
 		<p class="tag">{{ tag }}</p>
-		<a class="pro-name">{{ name }}</a>
+		<p class="pro-name">{{ name }}</p>
+		</router-link>
 	</div>
 </template>
 

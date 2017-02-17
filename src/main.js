@@ -1,16 +1,22 @@
 require('./style/reset.css');
 
-import Vue from 'vue'
+import Vue from 'vue';
+import VueRouter from "vue-router";
 
-import indexComponent from './components/index.vue'
-import cardHeader from './components/header.vue'
-import products from './components/product/products.vue'
 
-const vm = new Vue({
-	el: '#app',
-	components: {
-		'index': indexComponent,
-		'component-header': cardHeader,
-		'component-product': products,
-	}
+import index from './components/index.vue';
+import detail from './components/product/product-detail.vue';
+
+Vue.use(VueRouter);
+const routers = [
+	{ path: '/', name: 'index', component: index },
+	{ path: '/detail', name: 'detail', component: detail }
+];
+
+const router = new VueRouter({
+	routes: routers
 });
+
+new Vue({
+	router
+}).$mount('#app');
