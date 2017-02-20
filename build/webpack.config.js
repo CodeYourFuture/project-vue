@@ -1,9 +1,9 @@
 var webpack = require('webpack')
 
 module.exports = {
-	entry: './src/main',
+	entry: './../src/main',
 	output: {
-		path: './build',
+		path: './../dist',
 		filename: 'main.js',
 	},
 
@@ -20,14 +20,14 @@ module.exports = {
 			},
 			{
 				test: /\.css$/, 
-				loader: 'style-loader!css-loader',
+				loader: 'style-loader!css-loader!less-loader',
 			},
 			{
 				test: /\.(png|jpg|gif)$/, 
 				loader: 'url-loader',
 				query: {
 					limit: 10000,
-					name: 'build/image/[name].[hash:7].[ext]'
+					name: 'dist/img/[name].[hash:7].[ext]'
 				}
 			},
 		],
@@ -35,7 +35,7 @@ module.exports = {
 
 	resolve: {
   		alias: {
-    		'vue$': 'vue/dist/vue.common.js'
+    		'vue$': 'vue/dist/vue.js'
   		}
 	},
 

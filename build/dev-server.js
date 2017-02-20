@@ -4,7 +4,7 @@ var path = require('path');
 
 var app = express();
 
-app.use(express.static(__dirname));
+app.use(express.static(path.resolve(__dirname, '..')));
 
 app.listen(8080, function(err) {
 	if(err) {
