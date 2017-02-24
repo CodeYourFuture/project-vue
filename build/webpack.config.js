@@ -1,10 +1,12 @@
-var webpack = require('webpack')
+var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
 	entry: './../src/main',
 	output: {
-		path: './../dist',
-		filename: 'main.js',
+		path: path.resolve(__dirname, '../dist'),
+		publicPath: 'http://localhost:8080/dist',
+		filename: '[name].js',
 	},
 
 	module: {
@@ -20,14 +22,14 @@ module.exports = {
 			},
 			{
 				test: /\.css$/, 
-				loader: 'style-loader!css-loader!less-loader',
+				loader: 'style-loader!css-loader',
 			},
 			{
 				test: /\.(png|jpg|gif)$/, 
 				loader: 'url-loader',
 				query: {
 					limit: 10000,
-					name: 'dist/img/[name].[hash:7].[ext]'
+					name: '/img/[name].[hash:7].[ext]'
 				}
 			},
 		],
